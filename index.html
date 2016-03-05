@@ -14,11 +14,13 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+<link href="//fonts.googleapis.com/css?family=Mystery+Quest" rel="stylesheet" type="text/css">
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/skeleton.css">
-  <link rel="stylesheet" href="assets/css/custom.css"> 
+  <!--<link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/custom.css"> -->
+  <link rel="stylesheet" href="assets/css/global.css">
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -59,8 +61,8 @@
   <div class="contenedor2">
         <h1>Conversor de Temperaturas</h1>
         <p>Este conversor te permite hacer conversiones de Temperaturas (Celsius, Fahrenheit y Kelvin)<br/>Ejemplo de entradas: 23C to F  o 23K F.</p>
-        <label>Introduzca la temperatura a convertir: </label>
-        <input id="convert" class="u-full-width" type="text" autofocus oninput="convertir();" placeholder="23C">
+        <br><label>Introduzca la temperatura a convertir: </label>
+        <input id="convert" class="u-full-width" type="text" autofocus oninput="convertir();" placeholder="   23C">
         <span id="converted"></span>
   </div>
 
@@ -69,6 +71,7 @@
   <footer>
       <div class="ayuda">
       <h2>Ayuda</h2>
+      <br>
       <p>
         Se deben introducir las temperaturas de la forma especificada. Ejemplo: "23f c" o "32k to c"<br>
         Se puede introducir espacios antes, en medio o al final. Ejemplo: "4 f to k" o "4 f c"<br>
@@ -79,6 +82,7 @@
     
     <div class="equivalencias">
       <h2>Equivalencias</h2>
+      <br>
       <p>
         1 fahrenheit son -17.22 celcius<br>
         1 fahrenheit son 255,928 kelvin<br>
