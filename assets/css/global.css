@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(to top, yellow -10%, #de5317);
+   
+  
+}
+
+.contenedor1{
+   
+    position: static;
+
+
+}
+
+
+.contenedor2{
+ 
+    text-align: center;
+    width: auto;
+    margin-top: 94px;
+    color: black;
+
+    
+}
+
+
+.ayuda{
+   border-style:solid;
+    border-color:black;
+    border-radius:15px;
+    
+    
+    color: black;
+    margin-top: 50px;
+    float: left;
+    width: auto;
+    height: auto;
+    margin-left: 50px;
+    text-align: center;
+    
+}
+
+
+.equivalencias{
+   border-style:solid;
+    border-color:black;
+    border-radius:15px;
+    
+    color: black;
+    float: left;
+    margin-top:50px;
+    margin-left: 20px;
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+nav ul{
+        list-style: none;
+        background-color: black;
+}
+
+nav > ul{
+        position: relative;
+        display: table;
+        width: 100%;
+}
+
+nav > ul li{
+        display: table-cell;    /* Poner elementos uno al lado del otro */
+}
+
+/* Submenu */
+nav > ul > li:hover > ul{       /* Cuando pasas el mouse por encima, se muestra el submenu*/
+        display: block;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        
+}
+
+nav ul li ul{                   /* Propiedades del submenu */ 
+        display: block;
+        position: absolute;
+        background: black;    /* Fondo submenu */
+        width: auto;
+    
+}
+
+nav ul li #paginas li {         /* Establecer ancho de los li del submenu de las paginas */ 
+        width: auto;
+}
+
+nav ul li #repos li {           /* Establecer ancho de los li del submenu de repositorios */ 
+        width: auto;
+}
+
+nav > ul > li > ul{             /* Ocultar los subapartados del menu */
+        display: none; 
+}
+/* Fin Submenu */
+
+nav > ul li a{                  /* Dar formato a los enlaces*/
+        color: white;
+        display: block;
+        line-height: 25px;
+        padding: 12.5px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+}
+
+nav > ul li a:hover{
+        background: white;      /* Color de fondo que adquiere al pasar el mouse */
+        color: black;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+}
+
+
+
+.contenedor2 h1{
+    
+    font-size: 80px;
+    font-family: Mystery Quest;
+}
+.contenedor2 p{
+    font-size: 25px;
+    font-family: verdana;
+    
+}
+
+.contenedor2 label{
+    font-size: 20px;
+}
+
+#convert{
+    border-style: solid;
+    border-radius: 5px;
+    width: 300px;
+    height: 25px;
+}
+
+#converted{
+    color: black; 
+    font-weight: bold; 
+    font-size:large; 
+    
+
+}
+
+.ayuda h2{
+    font-size: 30px;
+    padding-left:10px;
+    padding-top:10px;
+    
+}
+.ayuda p{
+    font-size: 20px;
+    padding-left:10px;
+    padding-bottom: 10px;
+    padding-right:10px;
+}
+.ayuda hr{
+    color: black;
+}
+.equivalencias h2{
+    padding-top:10px;
+    font-size: 30px;
+    padding-left:10px;
+}
+.equivalencias p{
+    font-size: 20px;
+    padding-left:30px;
+    padding-right: 10px;
+}
