@@ -53,7 +53,14 @@
   function Metro(valor){
     Conversor.call(this, valor, "m");
     this.toPulgadas = function(){
-      return (this.getValor() * 39.3701);
+      return (parseInt(this.getValor()) * 39.3701);
+    };
+  }
+  
+  function Pulgada(valor){
+    Conversor.call(this, valor, "inch");
+    this.toMetro = function(){
+      return (parseInt(this.getValor()) * 0.0254);
     };
   }
   
@@ -82,6 +89,8 @@
 	Kelvin.prototype.constructor = Kelvin;
 	Metro.prototype = new Conversor();
 	Metro.prototype.constructor = Metro;
+	Pulgada.prototype = new Conversor();
+	Pulgada.prototype.constructor = Pulgada;
 	Euro.prototype = new Conversor();
 	Euro.prototype.constructor = Euro;
 	Dollar.prototype = new Conversor();
@@ -92,13 +101,14 @@
   exports.Farenheit = Farenheit;
   exports.Kelvin = Kelvin;
   exports.Metro = Metro;
+  exports.Pulgada = Pulgada;
   exports.Euro = Euro;
   exports.Dollar = Dollar;
 
   exports.convertir = function() {
     var valor     = document.getElementById('convert').value;
     var elemento  = document.getElementById('converted');
-    var regexp = /^\s*([-+]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*([fkc€$])\s*(?:to)?\s*([fkc€$])$/i;
+    var regexp = /^\s*([-+]?\d+(?:\.\d+)?(?:e[+-]?\d+)?)\s*([fkc€$mi])\s*(?:to)?\s*([fkc€$mi])$/i;
     valor = valor.match(regexp);
     
     if (valor) {
@@ -116,7 +126,7 @@
             elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
           else if (valorTo == 'k')
             elemento.innerHTML = celsius.toKelvin().toFixed(2) + " Kelvin";
-          break;
+        break;
           
         case 'f':
           var farenheit = new Farenheit(numero);
@@ -124,7 +134,7 @@
             elemento.innerHTML = farenheit.toCelsius().toFixed(2) + " Celsius";
           else if (valorTo == 'k')
             elemento.innerHTML = farenheit.toKelvin().toFixed(2) + " Kelvin";
-          break;
+        break;
           
         case 'k':
           var kelvin = new Kelvin(valor);
@@ -132,19 +142,31 @@
             elemento.innerHTML = kelvin.toCelsius().toFixed(2) + " Celsius";
           else if (valorTo == 'f')
             elemento.innerHTML = kelvin.toFarenheit().toFixed(2) + " Farenheit";
-          break;
+        break;
           
         case '€':
           var euro = new Euro(valor);
           if (valorTo == '$')
             elemento.innerHTML = euro.toDollar().toFixed(2) + " Dollars";
-          break;
+        break;
           
         case '$':
           var dollar = new Dollar(valor);
           if (valorTo == '€')
             elemento.innerHTML = dollar.toEuro().toFixed(2) + " Euros";
-          break;
+        break;
+          
+        case 'm':
+          var metro = new Metro(valor);
+          if (valorTo == 'i')
+            elemento.innerHTML = metro.toPulgadas().toFixed(2) + " Pulgadas";
+        break;
+        
+        case 'i':
+          var pulgada = new Pulgada(valor);
+          if (valorTo == 'm')
+            elemento.innerHTML = pulgada.toMetro().toFixed(2) + " Metros";
+        break;
         
         default:
            elemento.innerHTML = "Tipo no reconocido";
