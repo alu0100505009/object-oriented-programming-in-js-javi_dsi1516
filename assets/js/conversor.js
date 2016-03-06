@@ -73,19 +73,36 @@
     
     if (valor) {
       var numero = valor[1],
-          tipo   = valor[2].toLowerCase();
+          valorFrom   = valor[2].toLowerCase(),
+          valorTo = valor[3].toLowerCase();
       
       numero = parseFloat(numero);
-      console.log("Valor: " + numero + ", Tipo: " + tipo);
+      console.log("Valor: " + numero + valorFrom + " to " + valorTo);
       
-      switch (tipo) {
+            switch (valorFrom) {
         case 'c':
           var celsius = new Celsius(numero);
-          elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
+          if (valorTo == 'f')
+            elemento.innerHTML = celsius.toFarenheit().toFixed(2) + " Farenheit";
+          else if (valorTo == 'k')
+            elemento.innerHTML = celsius.toKelvin().toFixed(2) + " Kelvin";
+          //elemento.innerHTML = "HOLA";
           break;
+          
         case 'f':
           var farenheit = new Farenheit(numero);
-          elemento.innerHTML = farenheit.toCelsius().toFixed(2) + " Celsius";
+          if (valorTo == 'c')
+            elemento.innerHTML = farenheit.toCelsius().toFixed(2) + " Celsius";
+          else if (valorTo == 'k')
+            elemento.innerHTML = farenheit.toKelvin().toFixed(2) + " Kelvin";
+          break;
+          
+        case 'k':
+          var kelvin = new Kelvin(valor);
+          if (valorTo == 'c')
+            elemento.innerHTML = kelvin.toCelsius().toFixed(2) + " Celsius";
+          else if (valorTo == 'f')
+            elemento.innerHTML = kelvin.toFarenheit().toFixed(2) + " Farenheit";
           break;
         
         default:
