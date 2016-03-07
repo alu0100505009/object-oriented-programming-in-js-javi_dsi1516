@@ -3,8 +3,8 @@
     padding: 0;
 }
 body{
-    background:linear-gradient(to top, yellow -10%, #de5317);
-   
+    /*background:linear-gradient(to top, yellow -10%, #de5317);*/
+       background-color: #64AAD5;
   
 }
 
@@ -20,7 +20,7 @@ body{
  
     text-align: center;
     width: auto;
-    margin-top: 94px;
+    margin-top: 80px;
     color: black;
 
     
