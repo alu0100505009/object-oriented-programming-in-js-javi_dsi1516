@@ -14,18 +14,19 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
+<link href="//fonts.googleapis.com/css?family=Mystery+Quest" rel="stylesheet" type="text/css">
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/skeleton.css">
-  <link rel="stylesheet" href="assets/css/custom.css"> 
+  <!--<link rel="stylesheet" href="assets/css/skeleton.css">
+  <link rel="stylesheet" href="assets/css/custom.css"> -->
+  <link rel="stylesheet" href="assets/css/global.css">
 
   <!-- JS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script type="text/javascript" src="assets/js/conversor.js"></script>
   
-  <!-- FAVICON
-  -------------------------------------------------- -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="assets/images/favicon.ico">
 
 </head>
@@ -57,10 +58,10 @@
 
 
   <div class="contenedor2">
-        <h1>Conversor de Temperaturas</h1>
-        <p>Este conversor te permite hacer conversiones de Temperaturas (Celsius, Fahrenheit y Kelvin)<br/>Ejemplo de entradas: 23C to F  o 23K F.</p>
-        <label>Introduzca la temperatura a convertir: </label>
-        <input id="convert" class="u-full-width" type="text" autofocus oninput="convertir();" placeholder="23C">
+        <h1>Conversor de Medidas</h1>
+        <p>Este conversor te permite hacer conversiones entre diferentes medidas<br/>Ejemplo de entradas: 23C to F  o 23K F.</p>
+        <br><label>Introduzca la temperatura a convertir: </label>
+        <input id="convert" class="u-full-width" type="text" autofocus oninput="convertir();" placeholder=" Example: 23c to f">
         <span id="converted"></span>
   </div>
 
@@ -69,23 +70,26 @@
   <footer>
       <div class="ayuda">
       <h2>Ayuda</h2>
+      <br>
       <p>
         Se deben introducir las temperaturas de la forma especificada. Ejemplo: "23f c" o "32k to c"<br>
         Se puede introducir espacios antes, en medio o al final. Ejemplo: "4 f to k" o "4 f c"<br>
         Se aceptan números decimales. Ejemplo: "-1.2f to K" o "3.4c F"<br>
         Se aceptan exponentes. Ejemplo: "-1.2e-3f K"<br>
       </p>
+      <br><br>
     </div>
     
     <div class="equivalencias">
-      <h2>Equivalencias</h2>
+      <h2>Conversiones</h2>
+      <br>
       <p>
-        1 fahrenheit son -17.22 celcius<br>
-        1 fahrenheit son 255,928 kelvin<br>
-        1 celcius son 33.8 fahrenheit<br>
-        1 celcius son 274,15 kelvin<br>
-        1 kelvin son -457,86928 fahrenheit<br>
-        1 kelvin son -272,15 celcius<br>
+        1 f to c (fahrenheint to celcius)<br>
+        1 f to k (fahrenheint to kelvin)<br>
+        1 c to f (celcius to fahrenheint)<br>
+        1 $ to € (dollar to euros)<br>
+        1 m to i (metros to pulgadas)<br>
+        1 k to c (kelvin to celcius)<br>
       </p>
     </div>
   </footer>
